@@ -5,11 +5,13 @@ import javax.swing.JFormattedTextField;
 import javax.swing.JTextField;
 
 public class IncluirContatoView extends javax.swing.JFrame {
-
+    
     public IncluirContatoView() {
         initComponents();
+        setVisible(true);
+        setLocationRelativeTo(this.getParent());
     }
-
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -29,6 +31,11 @@ public class IncluirContatoView extends javax.swing.JFrame {
         lblTelefone.setText("Telefone");
 
         btnSalvar.setText("Salvar");
+        btnSalvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalvarActionPerformed(evt);
+            }
+        });
 
         btnFechar.setText("Fechar");
 
@@ -90,6 +97,10 @@ public class IncluirContatoView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtTelefoneActionPerformed
 
+    private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSalvarActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnFechar;
@@ -103,31 +114,31 @@ public class IncluirContatoView extends javax.swing.JFrame {
     public JButton getBtnFechar() {
         return btnFechar;
     }
-
+    
     public void setBtnFechar(JButton btnFechar) {
         this.btnFechar = btnFechar;
     }
-
+    
     public JButton getBtnSalvar() {
         return btnSalvar;
     }
-
+    
     public void setBtnSalvar(JButton btnSalvar) {
         this.btnSalvar = btnSalvar;
     }
-
+    
     public JTextField getTxtNome() {
         return txtNome;
     }
-
+    
     public void setTxtNome(JTextField txtNome) {
         this.txtNome = txtNome;
     }
-
+    
     public JFormattedTextField getTxtTelefone() {
         return txtTelefone;
     }
-
+    
     public void setTxtTelefone(JFormattedTextField txtTelefone) {
         this.txtTelefone = txtTelefone;
     }

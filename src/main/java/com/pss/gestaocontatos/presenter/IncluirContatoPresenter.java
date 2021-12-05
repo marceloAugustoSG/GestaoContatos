@@ -1,14 +1,35 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.pss.gestaocontatos.presenter;
 
-/**
- *
- * @author Marcelo
- */
+import com.pss.gestaocontatos.view.IncluirContatoView;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 public class IncluirContatoPresenter {
-    
+
+    private IncluirContatoView view;
+
+    public IncluirContatoPresenter() {
+        view = new IncluirContatoView();
+
+        view.getBtnSalvar().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
+            }
+        });
+
+        view.getBtnFechar().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                fechar();
+            }
+        });
+
+    }
+
+    private void fechar() {
+        view.dispose();
+    }
+
 }

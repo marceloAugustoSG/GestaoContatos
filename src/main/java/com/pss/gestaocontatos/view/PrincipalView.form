@@ -13,11 +13,25 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Incluir contato"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="opmIncluirContatoActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="opmConsultarContatos">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Consultar contatos"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="opmConsultarContatosActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="opmEncerrarSistema">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Encerrar sistema"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="opmEncerrarSistemaActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>

@@ -1,5 +1,7 @@
 package com.pss.gestaocontatos.view;
 
+import com.pss.gestaocontatos.presenter.ConsultarContatosPresenter;
+import com.pss.gestaocontatos.presenter.IncluirContatoPresenter;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
@@ -8,6 +10,8 @@ public class PrincipalView extends javax.swing.JFrame {
 
     public PrincipalView() {
         initComponents();
+        setVisible(true);
+        setLocationRelativeTo(this.getParent());
     }
 
     @SuppressWarnings("unchecked")
@@ -18,6 +22,7 @@ public class PrincipalView extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         opmIncluirContato = new javax.swing.JMenuItem();
         opmConsultarContatos = new javax.swing.JMenuItem();
+        opmEncerrarSistema = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("Gestão de contatos");
@@ -25,10 +30,28 @@ public class PrincipalView extends javax.swing.JFrame {
         jMenu1.setText("Opções");
 
         opmIncluirContato.setText("Incluir contato");
+        opmIncluirContato.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                opmIncluirContatoActionPerformed(evt);
+            }
+        });
         jMenu1.add(opmIncluirContato);
 
         opmConsultarContatos.setText("Consultar contatos");
+        opmConsultarContatos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                opmConsultarContatosActionPerformed(evt);
+            }
+        });
         jMenu1.add(opmConsultarContatos);
+
+        opmEncerrarSistema.setText("Encerrar sistema");
+        opmEncerrarSistema.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                opmEncerrarSistemaActionPerformed(evt);
+            }
+        });
+        jMenu1.add(opmEncerrarSistema);
 
         mbPrincipal.add(jMenu1);
 
@@ -48,11 +71,24 @@ public class PrincipalView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void opmIncluirContatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opmIncluirContatoActionPerformed
+        IncluirContatoPresenter presenterIncluir = new IncluirContatoPresenter();
+    }//GEN-LAST:event_opmIncluirContatoActionPerformed
+
+    private void opmEncerrarSistemaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opmEncerrarSistemaActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_opmEncerrarSistemaActionPerformed
+
+    private void opmConsultarContatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opmConsultarContatosActionPerformed
+        ConsultarContatosPresenter presenterConsultar = new ConsultarContatosPresenter();
+    }//GEN-LAST:event_opmConsultarContatosActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar mbPrincipal;
     private javax.swing.JMenuItem opmConsultarContatos;
+    private javax.swing.JMenuItem opmEncerrarSistema;
     private javax.swing.JMenuItem opmIncluirContato;
     // End of variables declaration//GEN-END:variables
 
@@ -87,4 +123,13 @@ public class PrincipalView extends javax.swing.JFrame {
     public void setOpmIncluirContato(JMenuItem opmIncluirContato) {
         this.opmIncluirContato = opmIncluirContato;
     }
+
+    public JMenuItem getOpmEncerrarSistema() {
+        return opmEncerrarSistema;
+    }
+
+    public void setOpmEncerrarSistema(JMenuItem opmEncerrarSistema) {
+        this.opmEncerrarSistema = opmEncerrarSistema;
+    }
+
 }

@@ -6,11 +6,13 @@ import javax.swing.JLabel;
 import javax.swing.JTable;
 
 public class ConsultarContatosView extends javax.swing.JFrame {
-
+    
     public ConsultarContatosView() {
         initComponents();
+        setVisible(true);
+        setLocationRelativeTo(this.getParent());
     }
-
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -119,47 +121,47 @@ public class ConsultarContatosView extends javax.swing.JFrame {
     public JButton getBtnFechar() {
         return btnFechar;
     }
-
+    
     public void setBtnFechar(JButton btnFechar) {
         this.btnFechar = btnFechar;
     }
-
+    
     public JButton getBtnSalvar() {
         return btnSalvar;
     }
-
+    
     public void setBtnSalvar(JButton btnSalvar) {
         this.btnSalvar = btnSalvar;
     }
-
+    
     public JButton getBtnVisualizar() {
         return btnVisualizar;
     }
-
+    
     public void setBtnVisualizar(JButton btnVisualizar) {
         this.btnVisualizar = btnVisualizar;
     }
-
+    
     public JCheckBox getCbOrdenarTelefone() {
         return cbOrdenarTelefone;
     }
-
+    
     public void setCbOrdenarTelefone(JCheckBox cbOrdenarTelefone) {
         this.cbOrdenarTelefone = cbOrdenarTelefone;
     }
-
+    
     public JTable getTblConsultaContatos() {
         return tblConsultaContatos;
     }
-
+    
     public void setTblConsultaContatos(JTable tblConsultaContatos) {
         this.tblConsultaContatos = tblConsultaContatos;
     }
-
+    
     public JLabel getTxtQtdTotal() {
         return txtQtdTotal;
     }
-
+    
     public void setTxtQtdTotal(JLabel txtQtdTotal) {
         this.txtQtdTotal = txtQtdTotal;
     }
