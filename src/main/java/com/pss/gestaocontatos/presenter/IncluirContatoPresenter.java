@@ -1,5 +1,7 @@
 package com.pss.gestaocontatos.presenter;
 
+import DAO.ContatoDAO;
+import com.pss.gestaocontatos.model.Contato;
 import com.pss.gestaocontatos.view.IncluirContatoView;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,8 +16,7 @@ public class IncluirContatoPresenter {
         view.getBtnSalvar().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-
+                salvar();
             }
         });
 
@@ -25,6 +26,18 @@ public class IncluirContatoPresenter {
                 fechar();
             }
         });
+
+    }
+
+    private void salvar() {
+        Contato contato;
+        ContatoDAO contatoDAO = new ContatoDAO();
+
+        String nome = view.getTxtNome().getText();
+        String telefone = view.getTxtTelefone().getText();
+        contato = new Contato(nome, telefone);
+
+        contatoDAO.create(contato);
 
     }
 
