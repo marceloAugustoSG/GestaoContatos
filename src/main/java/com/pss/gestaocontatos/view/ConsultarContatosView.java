@@ -1,24 +1,33 @@
 package com.pss.gestaocontatos.view;
 
+import DAO.ContatoDAO;
+import com.pss.gestaocontatos.presenter.ConsultarContatosPresenter;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTable;
 
 public class ConsultarContatosView extends javax.swing.JFrame {
-    
+
+    private ContatoDAO contatos;
+    private ConsultarContatosPresenter presenter;
+
     public ConsultarContatosView() {
         initComponents();
         setVisible(true);
         setLocationRelativeTo(this.getParent());
+
+        ConsultarContatosPresenter presenter;
+
     }
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         btnVisualizar = new javax.swing.JButton();
-        btnSalvar = new javax.swing.JButton();
+        btnExcluir = new javax.swing.JButton();
         btnFechar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         txtQtdTotal = new javax.swing.JLabel();
@@ -26,12 +35,17 @@ public class ConsultarContatosView extends javax.swing.JFrame {
         tblConsultaContatos = new javax.swing.JTable();
         cbOrdenarTelefone = new javax.swing.JCheckBox();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("Consultar contatos");
 
         btnVisualizar.setText("Visualizar");
 
-        btnSalvar.setText("Salvar");
+        btnExcluir.setText("Excluir");
+        btnExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExcluirActionPerformed(evt);
+            }
+        });
 
         btnFechar.setText("Fechar");
 
@@ -50,6 +64,11 @@ public class ConsultarContatosView extends javax.swing.JFrame {
 
             }
         ));
+        tblConsultaContatos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblConsultaContatosMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(tblConsultaContatos);
 
         cbOrdenarTelefone.setText("Ordenar por telefone");
@@ -71,7 +90,7 @@ public class ConsultarContatosView extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnVisualizar)
                         .addGap(10, 10, 10)
-                        .addComponent(btnSalvar)
+                        .addComponent(btnExcluir)
                         .addGap(10, 10, 10)
                         .addComponent(btnFechar))
                     .addGroup(layout.createSequentialGroup()
@@ -90,7 +109,7 @@ public class ConsultarContatosView extends javax.swing.JFrame {
                 .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnVisualizar)
-                    .addComponent(btnSalvar)
+                    .addComponent(btnExcluir)
                     .addComponent(btnFechar))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -106,10 +125,18 @@ public class ConsultarContatosView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_cbOrdenarTelefoneActionPerformed
 
+    private void tblConsultaContatosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblConsultaContatosMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tblConsultaContatosMouseClicked
+
+    private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnExcluirActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnExcluir;
     private javax.swing.JButton btnFechar;
-    private javax.swing.JButton btnSalvar;
     private javax.swing.JButton btnVisualizar;
     private javax.swing.JCheckBox cbOrdenarTelefone;
     private javax.swing.JLabel jLabel1;
@@ -121,48 +148,49 @@ public class ConsultarContatosView extends javax.swing.JFrame {
     public JButton getBtnFechar() {
         return btnFechar;
     }
-    
+
     public void setBtnFechar(JButton btnFechar) {
         this.btnFechar = btnFechar;
     }
-    
-    public JButton getBtnSalvar() {
-        return btnSalvar;
+
+    public JButton getBtnExcluir() {
+        return btnExcluir;
     }
-    
-    public void setBtnSalvar(JButton btnSalvar) {
-        this.btnSalvar = btnSalvar;
+
+    public void setBtnExcluir(JButton btnSalvar) {
+        this.btnExcluir = btnSalvar;
     }
-    
+
     public JButton getBtnVisualizar() {
         return btnVisualizar;
     }
-    
+
     public void setBtnVisualizar(JButton btnVisualizar) {
         this.btnVisualizar = btnVisualizar;
     }
-    
+
     public JCheckBox getCbOrdenarTelefone() {
         return cbOrdenarTelefone;
     }
-    
+
     public void setCbOrdenarTelefone(JCheckBox cbOrdenarTelefone) {
         this.cbOrdenarTelefone = cbOrdenarTelefone;
     }
-    
+
     public JTable getTblConsultaContatos() {
         return tblConsultaContatos;
     }
-    
+
     public void setTblConsultaContatos(JTable tblConsultaContatos) {
         this.tblConsultaContatos = tblConsultaContatos;
     }
-    
+
     public JLabel getTxtQtdTotal() {
         return txtQtdTotal;
     }
-    
+
     public void setTxtQtdTotal(JLabel txtQtdTotal) {
         this.txtQtdTotal = txtQtdTotal;
     }
+
 }

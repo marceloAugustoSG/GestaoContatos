@@ -1,5 +1,6 @@
 package com.pss.gestaocontatos.view;
 
+import DAO.ContatoDAO;
 import com.pss.gestaocontatos.presenter.ConsultarContatosPresenter;
 import com.pss.gestaocontatos.presenter.IncluirContatoPresenter;
 import javax.swing.JMenu;
@@ -8,8 +9,11 @@ import javax.swing.JMenuItem;
 
 public class PrincipalView extends javax.swing.JFrame {
 
+    private ContatoDAO contatos;
+
     public PrincipalView() {
         initComponents();
+        contatos = new ContatoDAO();
         setVisible(true);
         setLocationRelativeTo(this.getParent());
     }
@@ -80,7 +84,8 @@ public class PrincipalView extends javax.swing.JFrame {
     }//GEN-LAST:event_opmEncerrarSistemaActionPerformed
 
     private void opmConsultarContatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opmConsultarContatosActionPerformed
-        ConsultarContatosPresenter presenterConsultar = new ConsultarContatosPresenter();
+
+        new ConsultarContatosPresenter(contatos);
     }//GEN-LAST:event_opmConsultarContatosActionPerformed
 
 
