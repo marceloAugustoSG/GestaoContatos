@@ -9,12 +9,12 @@ import javax.swing.JMenuItem;
 
 public class PrincipalView extends javax.swing.JFrame {
 
-    private ContatoDAO contatos;
+    //private ContatoDAO contatos;
 
     public PrincipalView() {
         initComponents();
-        contatos = new ContatoDAO();
-        setVisible(true);
+        //contatos = new ContatoDAO();
+        //setVisible(true);
         setLocationRelativeTo(this.getParent());
     }
 
@@ -76,16 +76,16 @@ public class PrincipalView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void opmIncluirContatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opmIncluirContatoActionPerformed
-        IncluirContatoPresenter presenterIncluir = new IncluirContatoPresenter();
+        //IncluirContatoPresenter presenterIncluir = new IncluirContatoPresenter();
     }//GEN-LAST:event_opmIncluirContatoActionPerformed
 
     private void opmEncerrarSistemaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opmEncerrarSistemaActionPerformed
-        this.dispose();
+        //this.dispose();
     }//GEN-LAST:event_opmEncerrarSistemaActionPerformed
 
     private void opmConsultarContatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opmConsultarContatosActionPerformed
 
-        new ConsultarContatosPresenter(contatos);
+        //new ConsultarContatosPresenter(contatos);
     }//GEN-LAST:event_opmConsultarContatosActionPerformed
 
 
